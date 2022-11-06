@@ -1,5 +1,6 @@
 package com.vitalikasaty.intervale.test.library.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Book extends Product{
@@ -56,8 +57,7 @@ public class Book extends Product{
 
 	@Override
 	public String toString() {
-		return "Книга. [Автор: " + author + ", название: " + getTitle() + ", жанр: " + getTheme() + ", текст: "
-				+ getText() + ", год выпуска :" + getReleaseDate() + "]";
+		return "Книга. [Автор: " + author + ", название: " + getTitle() + ", жанр: " + getTheme() + ", год выпуска : " + new SimpleDateFormat("dd.MM.yyyy").format(getReleaseDate()) + "]";
 	}
 
 

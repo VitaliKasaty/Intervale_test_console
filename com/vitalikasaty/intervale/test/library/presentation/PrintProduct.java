@@ -13,5 +13,10 @@ public class PrintProduct {
 		System.out.println();
 	}
 	
+	public void readProduct (List<Product> products, int numToRead) {
+		System.out.println(products.get(numToRead - 1));
+		System.out.println("Текст:");
+		System.out.println(products.get(numToRead - 1).getText() +"\n");
+	}	
 
 }

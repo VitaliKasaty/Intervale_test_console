@@ -1,12 +1,11 @@
 package com.vitalikasaty.intervale.test.library;
 
-import java.text.ParseException;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import com.vitalikasaty.intervale.test.library.bean.Book;
 import com.vitalikasaty.intervale.test.library.bean.Library;
@@ -17,13 +16,13 @@ import com.vitalikasaty.intervale.test.library.dao.DAOException;
 import com.vitalikasaty.intervale.test.library.dao.LibraryDAO;
 import com.vitalikasaty.intervale.test.library.dao.impl.LibraryDAOImpl;
 import com.vitalikasaty.intervale.test.library.presentation.MainMenu;
-import com.vitalikasaty.intervale.test.library.presentation.PrintProduct;
 
 public class Main {
 	public static void main(String[] args) throws DAOException {
 		
 		Date date = new Date();
-		System.out.println(date.getYear() + 1900);
+		
+		System.out.println(new SimpleDateFormat("dd.MM.yyyy").format(date));
 		
 		MainMenu mm = new MainMenu();
 		mm.startProgram();
@@ -38,7 +37,8 @@ public class Main {
 		library.addProduct(newspaper);
 		library.addProduct(book);
 		LibraryDAO libraryDao = new LibraryDAOImpl();
-		library = libraryDao.getLibrary();
+		//library = libraryDao.getLibrary();
+		//libraryDao.saveLibrary(library);
 		
 		for (Product product : library.getProducts()) {
 			System.out.println(product);

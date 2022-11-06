@@ -1,5 +1,6 @@
 package com.vitalikasaty.intervale.test.library.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -76,7 +77,7 @@ public class Magazine extends Product {
 	@Override
 	public String toString() {
 		return "Журнал. [Номер выпуска " + issueNumber + ", редакторы: " + editors + ", название: " + getTitle()
-				+ ", жанр: " + getTheme() + ", текст: " + getText() + ", дата выпуска: " + getReleaseDate()
+				+ ", жанр: " + getTheme() + ", дата выпуска: " + new SimpleDateFormat("dd.MM.yyyy").format(getReleaseDate())
 				+ "]";
 	}
 

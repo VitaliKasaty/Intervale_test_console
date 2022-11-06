@@ -9,15 +9,17 @@ public class MainMenu {
 	
 	ControllerProvider controllerProvider = ControllerProvider.getInstanse();
 	LibraryController libraryController = controllerProvider.getLibraryController();
+	//PresentationProvider provider = PresentationProvider.getInstance();
+	
 	PrintProduct print = new PrintProduct();
 
 	Scanner sc = new Scanner(System.in);
 
 	public void startProgram() {
-
+		
 		String optionMainMenu = """
 				1) Просмотр/изменение каталога библиотеки.
-				2) Поиск печатного издания по критериям.
+				2) Поиск/чтение печатного издания по критериям.
 				3) Выйти из библиотеки.
 				""";
 		
@@ -35,6 +37,8 @@ public class MainMenu {
 					//print.printProducts(libraryController.getProducts("getProducts=all"));
 					break;	
 				case "2":
+					FindOption findOption = new FindOption();
+					findOption.menu();
 					break;
 				case "3":
 					System.out.println("До свидания!");

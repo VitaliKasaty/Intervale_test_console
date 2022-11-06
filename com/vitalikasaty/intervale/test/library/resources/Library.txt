@@ -1,15 +1,15 @@
-Newspaper
-title2
-theme2
-text2
-05.11.2022
-newsday1
-area1
+Magazine
+title3
+theme3
+text3
+06.11.2022
+678
+12; 
 ||
 Book
-title1
-theme1
-text1
-05.11.2022
-author1
+Война и мир
+Художественный
+Жили были если пели
+01.01.1967
+Лев Толстой
 ||

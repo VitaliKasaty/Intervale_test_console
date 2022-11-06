@@ -1,5 +1,6 @@
 package com.vitalikasaty.intervale.test.library.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Newspaper extends Product {
@@ -73,8 +74,8 @@ public class Newspaper extends Product {
 	@Override
 	public String toString() {
 		return "Газета. [Новость дня: " + newsOfTheDay + ", область распространения: " + distributionArea + ", название: "
-				+ getTitle() + ", жанр: " + getTheme() + ", текст: " + getText() + ", дата выпуска: "
-				+ getReleaseDate() + "]";
+				+ getTitle() + ", жанр: " + getTheme() + ", дата выпуска: "
+				+ new SimpleDateFormat("dd.MM.yyyy").format(getReleaseDate()) + "]";
 	}
 	
 	

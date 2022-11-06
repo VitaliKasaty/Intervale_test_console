@@ -49,9 +49,10 @@ public class ProductServiceImpl implements ProductService {
 				.collect(Collectors.toList());
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public List<Product> findProductByYearPublishing(int year) throws ServiceException {
-		return getProducts().stream().filter(product -> product.getReleaseDate().getYear() == year)
+		return getProducts().stream().filter(product -> product.getReleaseDate().getYear() + 1900 == year)
 				.collect(Collectors.toList());
 	}
 
