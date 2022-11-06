@@ -1,11 +1,3 @@
-Magazine
-title3
-theme3
-text3
-05.11.2022
-12
-Вася; Петя; Fedor; 
-||
 Newspaper
 title2
 theme2

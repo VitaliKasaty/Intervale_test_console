@@ -72,8 +72,8 @@ public class Newspaper extends Product {
 
 	@Override
 	public String toString() {
-		return "Newspaper [newsOfTheDay=" + newsOfTheDay + ", distributionArea=" + distributionArea + ", getTitle()="
-				+ getTitle() + ", getTheme()=" + getTheme() + ", getText()=" + getText() + ", getReleaseDate()="
+		return "Газета. [Новость дня: " + newsOfTheDay + ", область распространения: " + distributionArea + ", название: "
+				+ getTitle() + ", жанр: " + getTheme() + ", текст: " + getText() + ", дата выпуска: "
 				+ getReleaseDate() + "]";
 	}
 	

@@ -75,8 +75,8 @@ public class Magazine extends Product {
 
 	@Override
 	public String toString() {
-		return "Magazine [issueNumber=" + issueNumber + ", editors=" + editors + ", getTitle()=" + getTitle()
-				+ ", getTheme()=" + getTheme() + ", getText()=" + getText() + ", getReleaseDate()=" + getReleaseDate()
+		return "Журнал. [Номер выпуска " + issueNumber + ", редакторы: " + editors + ", название: " + getTitle()
+				+ ", жанр: " + getTheme() + ", текст: " + getText() + ", дата выпуска: " + getReleaseDate()
 				+ "]";
 	}
 

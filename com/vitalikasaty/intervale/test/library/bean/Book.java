@@ -56,8 +56,8 @@ public class Book extends Product{
 
 	@Override
 	public String toString() {
-		return "Book [author=" + author + ", getTitle()=" + getTitle() + ", getTheme()=" + getTheme() + ", getText()="
-				+ getText() + ", getReleaseDate()=" + getReleaseDate() + "]";
+		return "Книга. [Автор: " + author + ", название: " + getTitle() + ", жанр: " + getTheme() + ", текст: "
+				+ getText() + ", год выпуска :" + getReleaseDate() + "]";
 	}
 
 

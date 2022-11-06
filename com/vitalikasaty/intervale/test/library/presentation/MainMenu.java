@@ -2,18 +2,23 @@ package com.vitalikasaty.intervale.test.library.presentation;
 
 import java.util.Scanner;
 
+import com.vitalikasaty.intervale.test.library.controller.ControllerProvider;
+import com.vitalikasaty.intervale.test.library.controller.LibraryController;
+
 public class MainMenu {
+	
+	ControllerProvider controllerProvider = ControllerProvider.getInstanse();
+	LibraryController libraryController = controllerProvider.getLibraryController();
+	PrintProduct print = new PrintProduct();
 
 	Scanner sc = new Scanner(System.in);
 
 	public void startProgram() {
 
 		String optionMainMenu = """
-				1) Просмотр всей библиотеки.
-				2) Просмотр книг.
-				3) Просмотр журналов.
-				4) Просмотр газет
-				5) Выйти из библиотеки.
+				1) Просмотр/изменение каталога библиотеки.
+				2) Поиск печатного издания по критериям.
+				3) Выйти из библиотеки.
 				""";
 		
 		boolean isActiveSession = true;
@@ -25,14 +30,14 @@ public class MainMenu {
 			
 			switch (userInput) {
 				case "1":
+					ChangeLibraryOption changeLibraryOption = new ChangeLibraryOption();
+					changeLibraryOption.menu();
+					//print.printProducts(libraryController.getProducts("getProducts=all"));
 					break;	
 				case "2":
 					break;
 				case "3":
-					break;
-				case "4":
-					break;
-				case "5":
+					System.out.println("До свидания!");
 					isActiveSession = false;
 					break;
 				default:
