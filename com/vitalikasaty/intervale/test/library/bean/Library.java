@@ -4,15 +4,15 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Library implements Serializable {	
-	
+public class Library implements Serializable {
+
 	private static final long serialVersionUID = -8216546877682375934L;
-	
-	List<Product> products = new ArrayList<>();
-	
+
+	private List<Product> products = new ArrayList<>();
+
 	public Library() {
 	}
-	
+
 	public void addProduct(Product product) {
 		products.add(product);
 	}

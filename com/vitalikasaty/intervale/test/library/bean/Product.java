@@ -3,19 +3,19 @@ package com.vitalikasaty.intervale.test.library.bean;
 import java.io.Serializable;
 import java.util.Date;
 
-public abstract class Product implements Serializable{
+public abstract class Product implements Serializable {
 
 	private static final long serialVersionUID = 8871059965476999167L;
-	
-	private String title;	
+
+	private String title;
 	private String theme;
 	private String text;
 	private Date releaseDate;
-	
-	public Product() {		
+
+	public Product() {
 	}
 
-	public Product(String title, String theme, String text, Date releaseDate) {		
+	public Product(String title, String theme, String text, Date releaseDate) {
 		this.title = title;
 		this.theme = theme;
 		this.text = text;
@@ -104,6 +104,6 @@ public abstract class Product implements Serializable{
 	@Override
 	public String toString() {
 		return "Product [title=" + title + ", theme=" + theme + ", text=" + text + ", releaseDate=" + releaseDate + "]";
-	}	
+	}
 
 }

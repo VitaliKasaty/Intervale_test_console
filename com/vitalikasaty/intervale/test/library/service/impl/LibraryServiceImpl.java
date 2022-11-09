@@ -8,34 +8,31 @@ import com.vitalikasaty.intervale.test.library.dao.LibraryDAO;
 import com.vitalikasaty.intervale.test.library.service.LibraryService;
 import com.vitalikasaty.intervale.test.library.service.ServiceException;
 
-public class LibraryServiceImpl implements LibraryService{
+public class LibraryServiceImpl implements LibraryService {
 
 	private final DAOProvider provider = DAOProvider.getInstance();
-	
+	private LibraryDAO libraryDAO = provider.getLibraryDAO();
+
 	@Override
 	public Library getLibrary() throws ServiceException {
-		LibraryDAO libraryDAO = provider.getLibraryDAO();
 		try {
 			return libraryDAO.getLibrary();
 		} catch (DAOException e) {
 			throw new ServiceException(e);
 		}
-		
 	}
 
 	@Override
 	public boolean saveLibrary(Library library) throws ServiceException {
-		LibraryDAO libraryDAO = provider.getLibraryDAO();
 		try {
 			return libraryDAO.saveLibrary(library);
 		} catch (DAOException e) {
 			throw new ServiceException(e);
-		}		
+		}
 	}
 
 	@Override
 	public boolean addProduct(Product product) throws ServiceException {
-		LibraryDAO libraryDAO = provider.getLibraryDAO();
 		Library library;
 		try {
 			library = libraryDAO.getLibrary();
@@ -43,12 +40,11 @@ public class LibraryServiceImpl implements LibraryService{
 			return libraryDAO.saveLibrary(library);
 		} catch (DAOException e) {
 			throw new ServiceException(e);
-		}		
+		}
 	}
 
 	@Override
 	public boolean editProdict(int numProduct, Product editedProduct) throws ServiceException {
-		LibraryDAO libraryDAO = provider.getLibraryDAO();
 		Library library;
 		try {
 			library = libraryDAO.getLibrary();
@@ -56,12 +52,11 @@ public class LibraryServiceImpl implements LibraryService{
 			return libraryDAO.saveLibrary(library);
 		} catch (DAOException e) {
 			throw new ServiceException(e);
-		}			
+		}
 	}
 
 	@Override
 	public boolean deleteProduct(int numProduct) throws ServiceException {
-		LibraryDAO libraryDAO = provider.getLibraryDAO();
 		Library library;
 		try {
 			library = libraryDAO.getLibrary();
@@ -69,7 +64,7 @@ public class LibraryServiceImpl implements LibraryService{
 			return libraryDAO.saveLibrary(library);
 		} catch (DAOException e) {
 			throw new ServiceException(e);
-		}		
+		}
 	}
 
 }

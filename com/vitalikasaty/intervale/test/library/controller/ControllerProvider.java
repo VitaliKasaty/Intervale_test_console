@@ -3,13 +3,13 @@ package com.vitalikasaty.intervale.test.library.controller;
 import com.vitalikasaty.intervale.test.library.controller.impl.LibraryControllerImpl;
 import com.vitalikasaty.intervale.test.library.controller.impl.ProductControllerImpl;
 
-public class ControllerProvider {
-	
+public final class ControllerProvider {
+
 	private static final ControllerProvider instanse = new ControllerProvider();
-	
+
 	private LibraryController libraryController = new LibraryControllerImpl();
 	private ProductController productController = new ProductControllerImpl();
-	
+
 	private ControllerProvider() {
 	}
 
@@ -31,6 +31,6 @@ public class ControllerProvider {
 
 	public static ControllerProvider getInstanse() {
 		return instanse;
-	}	
+	}
 
 }

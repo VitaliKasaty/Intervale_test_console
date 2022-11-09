@@ -6,15 +6,16 @@ import java.util.Date;
 public class Newspaper extends Product {
 
 	private static final long serialVersionUID = -6378088123949322541L;
-	
+
 	private String newsOfTheDay;
-	private String distributionArea;	
-	
-	public Newspaper() {	
+	private String distributionArea;
+
+	public Newspaper() {
 		super();
 	}
 
-	public Newspaper(String title, String theme, String text, Date releaseDate, String newsOfTheDay, String distributionArea) {
+	public Newspaper(String title, String theme, String text, Date releaseDate, String newsOfTheDay,
+			String distributionArea) {
 		super(title, theme, text, releaseDate);
 		this.newsOfTheDay = newsOfTheDay;
 		this.distributionArea = distributionArea;
@@ -73,10 +74,9 @@ public class Newspaper extends Product {
 
 	@Override
 	public String toString() {
-		return "Газета. [Новость дня: " + newsOfTheDay + ", область распространения: " + distributionArea + ", название: "
-				+ getTitle() + ", жанр: " + getTheme() + ", дата выпуска: "
+		return "Газета. [Название: " + getTitle() + ", новость дня: " + getNewsOfTheDay()
+				+ ", область распространения: " + getDistributionArea() + ", жанр: " + getTheme() + ", дата выпуска: "
 				+ new SimpleDateFormat("dd.MM.yyyy").format(getReleaseDate()) + "]";
 	}
-	
-	
+
 }

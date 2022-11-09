@@ -3,14 +3,14 @@ package com.vitalikasaty.intervale.test.library.bean;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Book extends Product{
+public class Book extends Product {
 
 	private static final long serialVersionUID = -1112995440209084026L;
-	
+
 	private String author;
 
 	public Book() {
-		super();		
+		super();
 	}
 
 	public Book(String title, String theme, String text, Date releaseDate, String author) {
@@ -57,8 +57,8 @@ public class Book extends Product{
 
 	@Override
 	public String toString() {
-		return "Книга. [Автор: " + author + ", название: " + getTitle() + ", жанр: " + getTheme() + ", год выпуска : " + new SimpleDateFormat("dd.MM.yyyy").format(getReleaseDate()) + "]";
+		return "Книга.  [Автор: " + author + ", название: " + getTitle() + ", жанр: " + getTheme() + ", год выпуска : "
+				+ new SimpleDateFormat("dd.MM.yyyy").format(getReleaseDate()) + "]";
 	}
-
 
 }

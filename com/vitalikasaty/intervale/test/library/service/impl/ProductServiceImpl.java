@@ -13,17 +13,15 @@ import com.vitalikasaty.intervale.test.library.service.ServiceException;
 public class ProductServiceImpl implements ProductService {
 
 	private final DAOProvider provider = DAOProvider.getInstance();
-	LibraryDAO libraryDAO = provider.getLibraryDAO();
 
 	@Override
 	public List<Product> getProducts() throws ServiceException {
-
+		LibraryDAO libraryDAO = provider.getLibraryDAO();
 		try {
 			return libraryDAO.getLibrary().getProducts();
 		} catch (DAOException e) {
 			throw new ServiceException(e);
 		}
-
 	}
 
 	@Override
@@ -39,14 +37,12 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public List<Product> findProductByTitle(String title) throws ServiceException {
-		return getProducts().stream().filter(product -> product.getTitle().equals(title))
-				.collect(Collectors.toList());
+		return getProducts().stream().filter(product -> product.getTitle().equals(title)).collect(Collectors.toList());
 	}
 
 	@Override
 	public List<Product> findProductByTheme(String theme) throws ServiceException {
-		return getProducts().stream().filter(product -> product.getTheme().equals(theme))
-				.collect(Collectors.toList());
+		return getProducts().stream().filter(product -> product.getTheme().equals(theme)).collect(Collectors.toList());
 	}
 
 	@SuppressWarnings("deprecation")

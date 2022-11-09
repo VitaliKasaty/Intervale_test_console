@@ -9,8 +9,8 @@ public class Magazine extends Product {
 
 	private static final long serialVersionUID = 1364324377062967168L;
 
-	public int issueNumber;
-	public List<String> editors = new ArrayList<>();
+	private int issueNumber;
+	private List<String> editors = new ArrayList<>();
 
 	public Magazine() {
 		super();
@@ -21,7 +21,7 @@ public class Magazine extends Product {
 		this.issueNumber = issueNumber;
 		this.editors = editors;
 	}
-	
+
 	public void addEditor(String editor) {
 		this.editors.add(editor);
 	}
@@ -76,10 +76,9 @@ public class Magazine extends Product {
 
 	@Override
 	public String toString() {
-		return "Журнал. [Номер выпуска " + issueNumber + ", редакторы: " + editors + ", название: " + getTitle()
-				+ ", жанр: " + getTheme() + ", дата выпуска: " + new SimpleDateFormat("dd.MM.yyyy").format(getReleaseDate())
-				+ "]";
+		return "Журнал. [Название: " + getTitle() + ", номер выпуска: " + issueNumber + ", редакторы: " + getEditors()
+				+ ", жанр: " + getTheme() + ", дата выпуска: "
+				+ new SimpleDateFormat("dd.MM.yyyy").format(getReleaseDate()) + "]";
 	}
 
-	
 }
